@@ -1,0 +1,20 @@
+:root {
+  --color-bg: #0b0c10; /* Primär bakgrund */
+  --color-surface: #1f2833; /* Sekundär (paneler/kort) */
+  --color-accent1: #66fcf1; /* Highlight/knappar */
+  --color-accent2: #45a29e; /* Call to action */
+  --color-text: #c5c6c7; /* Brödtext */
+  --color-heading: #ffffff; /* Rubriker */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+}
