@@ -1,6 +1,6 @@
 :root {
   --color-bg: #0b0c10; /* Primär bakgrund */
-  --color-surface: #1f2833; /* Sekundär (paneler/kort) */
+  --color-surface: #1f252a; /* Sekundär (paneler/kort) */
   --color-accent1: #66fcf1; /* Highlight/knappar */
   --color-accent2: #45a29e; /* Call to action */
   --color-text: #c5c6c7; /* Brödtext */
@@ -11,10 +11,57 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: sans-serif;
+  padding: 0px 15px;
+  margin: 0;
 }
 
 h1,
 h2,
 h3 {
   color: var(--color-heading);
+  margin: 0;
+}
+
+.full-section{
+    min-height: 100vh;
+}
+.half-section{
+    min-height: 50vh;
+}
+
+.introduction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.introduction h1{
+    font-size: 4rem;
+}
+
+.introduction p {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.employees{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.employee{
+    height: 300px;
+    width: 200px;
+    border: 1px solid white;
+}
+
+.contact{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-surface);
 }
