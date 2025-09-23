@@ -7,6 +7,15 @@
     <title>Document</title>
   </head>
   <body>
+    <header>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="menuIcon"><img src="images/menuicon.png" alt=""></label>
+        <ul id="menu">
+            <li><a href="#ourMission">Our Mission</a></li>
+            <li><a href="#employees">Employee</a></li>
+            <li><a href="#contactStuff">Contact</a></li>
+        </ul>
+    </header>
     <div class="sections">
         <section class="full-section introduction">
           <h1>Galaxium Voyages</h1>
@@ -14,7 +23,7 @@
             your playground</p>
         </section>
         <section class="half-section">
-          <h2>Our Mission</h2>
+          <a id="ourMission"><h2>Our Mission</h2></a>
           <p>
             Galaxium Voyages är pionjärer inom intergalaktisk turism. Vi erbjuder
             exklusiva rymdresor till några av universums mest spektakulära galaxer —
@@ -29,14 +38,14 @@
             your playground
           </p>
         </section>
-        <section class="full-section employees">
-          <div class="employee"></div>
-          <div class="employee"></div>
-          <div class="employee"></div>
-          <div class="employee"></div>
-          <div class="employee"></div>
+        <a id="employees"><section class="full-section employees"></a>
+          <div class="employee"><img src="images/BlueProfile.png" alt=""></div>
+          <div class="employee"><img src="images/GreenProfile.png" alt=""></div>
+          <div class="employee"><img src="images/PurpleProfile.png" alt=""></div>
+          <div class="employee"><img src="images/RedProfile.png" alt=""></div>
+          <div class="employee"><img src="images/YellowProfile.png" alt=""></div>
         </section>
     </div>
-    <footer class="contact">contact stuff</footer>
+    <a id="contactStuff"><footer class="contact">contact stuff</footer></a>
   </body>
 </html>
