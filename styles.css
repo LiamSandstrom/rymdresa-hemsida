@@ -8,6 +8,10 @@
   --color-second-bg: rgb(35, 32, 32);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -153,25 +157,25 @@ h3 {
   }
 }
 header {
-    padding: 1em;
-    text-align: right;
+  padding: 1em;
+  text-align: right;
 }
 
 #menu {
-    display: none;
-    list-style-type: none;
+  display: none;
+  list-style-type: none;
 }
 
 #menu-toggle:checked ~ #menu {
-    display: block;
+  display: block;
 }
 
 #menu-toggle {
-    display: none;
+  display: none;
 }
 
 a {
-    color: #c5c6c7;
+  color: #c5c6c7;
 }
 
 #menu li a {
@@ -184,5 +188,5 @@ a {
 }
 
 .employee img {
-    height: 100%;
+  height: 100%;
 }
