@@ -152,3 +152,37 @@ h3 {
     gap: 6px;
   }
 }
+header {
+    padding: 1em;
+    text-align: right;
+}
+
+#menu {
+    display: none;
+    list-style-type: none;
+}
+
+#menu-toggle:checked ~ #menu {
+    display: block;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+a {
+    color: #c5c6c7;
+}
+
+#menu li a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+#menu li a:hover {
+  transform: scale(1.2);
+}
+
+.employee img {
+    height: 100%;
+}
