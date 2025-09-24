@@ -257,3 +257,70 @@ a {
   transform: scale(1.2);
 }
 }
+
+#galaxium{
+  z-index: 3;
+}
+
+.rocket{
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    overflow: hidden; /* Döljer allt som går utanför containern .rocket*/
+    position: absolute;
+}
+.rocket .motion{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 20%;
+    left: calc(50% - 100px); /* Centrerar motion div:en horisontellt (width:200px; / 2 = 100px) */
+    transform-style: preserve-3d; /* Gör att div:en under renderas i 3D */
+    animation: autoRun 10s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-10deg) /*Ger bilden en liten lutning för att det ska se mer dynamiskt ut.*/ rotateY(360deg); /* Den snurrar ett helt varv*/
+    }
+}
+
+.rocket .motion img {
+    position: absolute; /* ersätter .item's inset */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    rotate: 90deg;
+    scale: 0.5;
+    transform: translateZ(300px); /* Flyttad hit från .item */
+}
+
+@media screen and (max-width: 750px){
+
+.rocket .motion{
+  top: 22%;
+  animation: autoRun 7s linear infinite; /* Snabbare rotation på mindre skärm */
+  }
+
+.rocket .motion img{
+    transform: 
+        translateZ(200px); /* Hur stor cirkel raketen ska göra*/
+}
+}
+
+@media screen and (max-width: 400px){
+
+.rocket .motion{
+  top: 18%;
+  animation: autoRun 5s linear infinite; /* Snabbare rotation på mindre skärm */
+  }
+
+.rocket .motion img{
+    transform: 
+        translateZ(150px); /* Hur stor cirkel raketen ska göra*/
+}
+}
