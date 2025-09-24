@@ -48,6 +48,7 @@ h3 {
 .full-section {
   min-height: 100vh;
 }
+
 .our-mission {
   min-height: 50vh;
   flex-direction: column;
@@ -83,9 +84,26 @@ h3 {
 }
 
 .employee {
-  height: 300px;
-  width: 200px;
-  border: 1px solid white;
+    height: 300px;
+    width: 200px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.employee img {
+    height: 40%;
+    border-radius: 10%;
+    margin-top: 2px;
+    width: 50%;
+    align-items: center;
+}
+
+.employeeText {
+    padding: 0.2rem;
 }
 
 .footer {
@@ -193,8 +211,4 @@ a {
 
 #menu li a:hover {
   transform: scale(1.2);
-}
-
-.employee img {
-  height: 100%;
 }
