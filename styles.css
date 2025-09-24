@@ -188,8 +188,10 @@ header {
 }
 
 #menu {
-  display: none;
+  display: flex;
   list-style-type: none;
+  justify-content: center;
+  gap: 1rem;
 }
 
 #menu-toggle:checked ~ #menu {
@@ -197,6 +199,10 @@ header {
 }
 
 #menu-toggle {
+  display: none;
+}
+
+#menuIcon {
   display: none;
 }
 
