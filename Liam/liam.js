@@ -24,15 +24,17 @@ async function initAnimationsWithDelay(ms) {
   await delay(ms);
   initAppearAnimation();
 
-  await delay(2000)
+  await delay(2000);
   const span = document.querySelector("#scroll-span");
   initScrollAnimation(span);
 }
-
 
 initStarsBackground();
 initAnimationsWithDelay(100);
 
 /**
+bugs:
+ * star:
+ ** mouseenter -> mouseleave -> mouseenter before mouseleave animation starts leads to mouseleave playing even when hovering
 
 **/
