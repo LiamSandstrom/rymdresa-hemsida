@@ -1,0 +1,135 @@
+:root {
+  --color-bg: #0c0c0c; /* Primär bakgrund */
+  --color-second-bg: rgb(35, 32, 32);
+  --color-surface: #1f252a; /* Sekundär (paneler/kort) */
+  --color-accent1: #fca766; /* Highlight/knappar */
+  --color-accent2: #9e5914; /* Call to action */
+  --text-color: #c5c6c7; /* Brödtext */
+  --heading-color: #ffffff; /* Rubriker */
+
+  --heading-weight: 500;
+  --body-weight: 400;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.815rem;
+  line-height: 1.05;
+  margin: 0 0 0.75rem;
+  font-weight: var(--heading-weight);
+  color: var(--heading-color);
+}
+h2 {
+  font-size: 3.052rem;
+  line-height: 1.08;
+  margin: 0 0 0.75rem;
+  font-weight: var(--heading-weight);
+  color: var(--heading-color);
+}
+h3 {
+  font-size: 2.441rem;
+  line-height: 1.12;
+  margin: 0 0 0.6rem;
+  font-weight: var(--heading-weight);
+  color: var(--heading-color);
+}
+h4 {
+  font-size: 1.953rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+h5 {
+  font-size: 1.563rem;
+  line-height: 1.25;
+  margin: 0 0 0.4rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+h6 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin: 0 0 0.35rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  font-weight: var(--body-weight);
+  color: var(--text-color);
+}
+
+.text-xs {
+  font-size: 0.64rem;
+  line-height: 1.3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.cell {
+  display: grid;
+  align-self: center;
+  transition: all 1s;
+}
+
+.cell:hover {
+  opacity: 100%;
+}
+
+.star {
+  width: 5px;
+  height: 5px;
+  background-color: var(--heading-color);
+
+  border-radius: 100%;
+  transition: all 0.5s;
+  margin: 10px;
+  box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+}
+
+.star-hover {
+  scale: 2;
+}
