@@ -1,6 +1,8 @@
 import ItemCarousel from "./itemCarousel.js";
 import { StarsBackground } from "./stars.js";
 import { initScrollAnimation } from "./animations.js";
+import { initAppearAnimation } from "./animations.js";
+import { delay } from "./helpers.js";
 
 function initItemCarousel() {
   const itemDiv = document.querySelector("#item-carousel");
@@ -18,13 +20,18 @@ function initStarsBackground() {
   starsBackground.init();
 }
 
-function initAnimations() {
+async function initAnimationsWithDelay(ms) {
+  await delay(ms);
+  initAppearAnimation();
+
+  await delay(2000)
   const span = document.querySelector("#scroll-span");
   initScrollAnimation(span);
 }
 
+
 initStarsBackground();
-initAnimations();
+initAnimationsWithDelay(100);
 
 /**
 

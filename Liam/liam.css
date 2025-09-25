@@ -261,12 +261,18 @@ p {
   background-color: var(--heading-color);
   pointer-events: none;
   backface-visibility: hidden;
+
+  animation: opacityIn 2s forwards;
 }
 
-/* ===== PAGE SECTIONS ===== */
+/* == Introduction == */
+
+
+
+
+/* ===== Animations ===== */
 #scroll-span span {
   display: inline-block;
-  animation: wave 4s ease-in-out infinite;
 }
 
 @keyframes wave {
@@ -285,5 +291,34 @@ p {
   25% {
     transform: translateY(-8px);
     color: var(--color-accent3);
+  }
+}
+
+.slide-in {
+  will-change: transform;
+  animation: slideIn 0.7s forwards;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes opacityIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
