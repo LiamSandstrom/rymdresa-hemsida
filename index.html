@@ -4,17 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" type="module"></script>
+
     <title>Document</title>
   </head>
   <body>
     <header>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" id="menuIcon"><img src="images/menuicon.png" alt=""></label>
-        <ul id="menu">
-            <li><a href="#ourMission">Our Mission</a></li>
-            <li><a href="#employees">Employee</a></li>
-            <li><a href="#contactStuff">Contact</a></li>
-        </ul>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" id="menuIcon"
+        ><img src="images/menuicon.png" alt=""
+      /></label>
+      <ul id="menu">
+        <li><a href="#ourMission">Our Mission</a></li>
+        <li><a href="#employees">Employee</a></li>
+        <li><a href="#contactStuff">Contact</a></li>
+      </ul>
     </header>
     <div class="sections">
       <section class="full-section introduction">
@@ -38,21 +42,40 @@
         </p>
       </section>
       <section class="full-section employees" id="employees">
-        <div class="employee"><img src="images/BlueProfile.png" alt=""></div>
-        <div class="employee"><img src="images/GreenProfile.png" alt=""></div>
-        <div class="employee"><img src="images/PurpleProfile.png" alt=""></div>
-        <div class="employee"><img src="images/RedProfile.png" alt=""></div>
-        <div class="employee"><img src="images/YellowProfile.png" alt=""></div>
+        <div class="employee"><img src="images/BlueProfile.png" alt="" /></div>
+        <div class="employee"><img src="images/GreenProfile.png" alt="" /></div>
+        <div class="employee">
+          <img src="images/PurpleProfile.png" alt="" />
+        </div>
+        <div class="employee"><img src="images/RedProfile.png" alt="" /></div>
+        <div class="employee">
+          <img src="images/YellowProfile.png" alt="" />
+        </div>
       </section>
     </div>
     <footer class="footer" id="contactStuff">
       <h3>Contact us!</h3>
       <div class="contact">
-        <input type="text" id="first-name" placeholder="First name" />
-        <input type="text" id="last-name" placeholder="Last name" />
-        <input type="text" id="email" placeholder="Email address" />
-        <input type="text" id="phonenumber" placeholder="Phone number" />
-        <input type="text" id="message" placeholder="Message" />
+        <div id="first-name-div">
+          <input type="text" id="first-name" placeholder="First name" />
+          <p id="first-name-text"></p>
+        </div>
+        <div id="last-name-div">
+          <input type="text" id="last-name" placeholder="Last name" />
+          <p id="last-name-text"></p>
+        </div>
+        <div id="email-div">
+          <input type="text" id="email" placeholder="Email address" />
+          <p id="email-text"></p>
+        </div>
+        <div id="phonenumber-div">
+          <input type="text" id="phonenumber" placeholder="Phone number" />
+          <p id="phonenumber-text"></p>
+        </div>
+        <div id="message-div">
+          <input type="text" id="message" placeholder="Message" />
+          <p id="message-text"></p>
+        </div>
         <button id="button">Submit</button>
       </div>
     </footer>
