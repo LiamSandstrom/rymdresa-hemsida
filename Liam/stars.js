@@ -27,6 +27,7 @@ export class StarsBackground {
     this.#bgElement.style.gridTemplateRows = `repeat(auto-fill, ${
       this.#cellSize
     }px)`;
+    this.#bgElement.style.opacity = "100%";
 
     window.addEventListener("resize", () => {
       this.#bgElement.innerHTML = "";
@@ -35,8 +36,11 @@ export class StarsBackground {
   }
 
   #createBackground() {
-    const cols = Math.floor((window.innerWidth * 1.2) / this.#cellSize);
-    const rows = Math.floor((window.innerHeight * 1.2) / this.#cellSize);
+    const pageWidth = document.documentElement.scrollWidth;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    const cols = Math.floor(pageWidth / this.#cellSize);
+    const rows = Math.floor(pageHeight / this.#cellSize);
 
     for (let r = 0; r < rows; r++) {
       for (let c = 0; c < cols; c++) {
@@ -58,6 +62,7 @@ export class StarsBackground {
 
     div.addEventListener("mouseenter", this.#cellEnter);
     div.addEventListener("mouseleave", this.#cellLeave);
+    div.addEventListener("mousedown", this.#cellClick);
 
     div.addEventListener("touchstart", this.#cellEnter);
     div.addEventListener("touchend", this.#cellLeave);
@@ -68,8 +73,9 @@ export class StarsBackground {
   #cellEnter(e) {
     const cell = e.target;
     for (const child of cell.children) {
-      child.style.transition = "all 0.3s ease";
+      child.style.transition = "all 0.25s ease";
       child.classList.add("star-hover");
+      cell.style.cursor = "pointer";
     }
   }
 
@@ -77,9 +83,24 @@ export class StarsBackground {
     const cell = e.target;
     await delay(500);
     for (const child of cell.children) {
-      child.style.transition = "all 1s";
+      child.style.transition = "all 0.9s";
       child.classList.remove("star-hover");
-      child.style.backgroundColor = "white";
+    }
+  }
+
+  async #cellClick(e) {
+    console.log(e);
+    const cell = e.target;
+    for (const child of cell.children) {
+      child.classList.add("star-clicked-begin");
+      child.style.transition = "scale 0.8s, background-color 0.50s";
+      await delay(550);
+      child.classList.remove("star-clicked-begin");
+      child.style.transition = "all 0.3s";
+      child.classList.add("star-clicked");
+      await delay(1000);
+      child.style.transition = "all 1s";
+      child.classList.remove("star-clicked");
     }
   }
 

@@ -2,8 +2,9 @@
   --color-bg: #0c0c0c; /* Primär bakgrund */
   --color-second-bg: rgb(35, 32, 32);
   --color-surface: #1f252a; /* Sekundär (paneler/kort) */
-  --color-accent1: #fca766; /* Highlight/knappar */
-  --color-accent2: #9e5914; /* Call to action */
+  --color-accent1: #f2e49d; /* Call to action */
+  --color-accent2: #f6aa71; /* Highlight/knappar */
+  --color-accent3: #ee7762; /* Highlight/knappar */
   --text-color: #c5c6c7; /* Brödtext */
   --heading-color: #ffffff; /* Rubriker */
 
@@ -91,13 +92,12 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  height: 200vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
 }
 
 #background {
@@ -107,6 +107,10 @@ body {
   display: grid;
   justify-content: center;
   align-content: center;
+
+  transition: opacity 3s;
+  opacity: 0;
+  filter: blur(0.5px);
 }
 
 .cell {
@@ -115,21 +119,32 @@ body {
   transition: all 1s;
 }
 
-.cell:hover {
-  opacity: 100%;
-}
-
 .star {
   width: 5px;
   height: 5px;
-  background-color: var(--heading-color);
+  pointer-events: none;
+  background-color: var(--text-color);
 
   border-radius: 100%;
   transition: all 0.5s;
   margin: 10px;
-  box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+  box-shadow: 0 0 5px var(--text-color), 0 0 10px var(--text-color),
+    0 0 15px var(--text-color);
 }
 
 .star-hover {
   scale: 2;
+  background-color: var(--heading-color);
+  box-shadow: 0 0 5px var(--heading-color), 0 0 12px var(--heading-color),
+    0 0 18px var(--heading-color);
+}
+
+.star-clicked-begin {
+  scale: 3.5;
+  background-color: black;
+}
+
+.star-clicked {
+  opacity: 0;
+  scale: 0;
 }

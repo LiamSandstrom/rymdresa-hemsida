@@ -17,4 +17,6 @@ function initStarsBackground() {
   starsBackground.init();
 }
 
+initItemCarousel()
 initStarsBackground();
+
