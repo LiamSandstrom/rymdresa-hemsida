@@ -1,69 +1,150 @@
+/* ===== CSS VARIABLES ===== */
 :root {
-  --color-bg: #0c0c0c; /* Primär bakgrund */
+  /* Colors */
+  --color-bg: #0c0c0c;
   --color-second-bg: rgb(35, 32, 32);
-  --color-surface: #1f252a; /* Sekundär (paneler/kort) */
-  --color-accent1: #f2e49d; /* Call to action */
-  --color-accent2: #f6aa71; /* Highlight/knappar */
-  --color-accent3: #ee7762; /* Highlight/knappar */
-  --text-color: #c5c6c7; /* Brödtext */
-  --heading-color: #ffffff; /* Rubriker */
+  --color-surface: #1f252a;
+  --color-accent1: #f2e49d;
+  --color-accent2: #f6aa71;
+  --color-accent3: #ee7762;
+  --text-color: #c5c6c7;
+  --text-color-weak: #c5c6c732;
+  --heading-color: #ffffff;
 
-  --heading-weight: 500;
-  --body-weight: 400;
+  /* Typography */
+  --heading-weight: 300;
+  --body-weight: 200;
 }
 
-/* Headings */
+/* ===== BASE STYLES ===== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Standard base */
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* ===== TYPOGRAPHY ===== */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: var(--color-heading);
+  color: var(--heading-color);
+  font-weight: var(--heading-weight);
   margin: 0;
 }
 
+/* Mobile-first heading sizes */
 h1 {
-  font-size: 3.815rem;
-  line-height: 1.05;
+  font-size: 2.25rem; /* 36px mobile */
+  line-height: 1.1;
   margin: 0 0 0.75rem;
-  font-weight: var(--heading-weight);
-  color: var(--heading-color);
 }
+
 h2 {
-  font-size: 3.052rem;
-  line-height: 1.08;
+  font-size: 1.875rem; /* 30px mobile */
+  line-height: 1.15;
   margin: 0 0 0.75rem;
-  font-weight: var(--heading-weight);
-  color: var(--heading-color);
 }
+
 h3 {
-  font-size: 2.441rem;
-  line-height: 1.12;
-  margin: 0 0 0.6rem;
-  font-weight: var(--heading-weight);
-  color: var(--heading-color);
-}
-h4 {
-  font-size: 1.953rem;
+  font-size: 1.5rem; /* 24px mobile */
   line-height: 1.2;
+  margin: 0 0 0.6rem;
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px mobile */
+  line-height: 1.25;
   margin: 0 0 0.5rem;
   font-weight: 600;
-  color: var(--heading-color);
 }
+
 h5 {
-  font-size: 1.563rem;
-  line-height: 1.25;
+  font-size: 1.125rem; /* 18px mobile */
+  line-height: 1.3;
   margin: 0 0 0.4rem;
   font-weight: 600;
-  color: var(--heading-color);
 }
+
 h6 {
-  font-size: 1.25rem;
-  line-height: 1.3;
+  font-size: 1rem; /* 16px mobile */
+  line-height: 1.35;
   margin: 0 0 0.35rem;
   font-weight: 600;
-  color: var(--heading-color);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.75rem; /* 44px tablet */
+    line-height: 1.08;
+  }
+
+  h2 {
+    font-size: 2.2rem; /* 35px tablet */
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 1.75rem; /* 28px tablet */
+    line-height: 1.15;
+  }
+
+  h4 {
+    font-size: 1.4rem; /* 22px tablet */
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.052rem; /* 49px desktop */
+    line-height: 1.05;
+  }
+
+  h2 {
+    font-size: 2.441rem; /* 39px desktop */
+    line-height: 1.08;
+  }
+
+  h3 {
+    font-size: 1.953rem; /* 31px desktop */
+    line-height: 1.12;
+  }
+
+  h4 {
+    font-size: 1.563rem; /* 25px desktop */
+    line-height: 1.2;
+  }
+
+  h5 {
+    font-size: 1.25rem; /* 20px desktop */
+    line-height: 1.25;
+  }
 }
 
 p {
@@ -79,40 +160,35 @@ p {
   line-height: 1.3;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--color-bg);
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 200vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
+/* ===== LAYOUT COMPONENTS ===== */
 #background {
   position: absolute;
+  z-index: 0;
   height: 100%;
   width: 100%;
   display: grid;
   justify-content: center;
   align-content: center;
-
   transition: opacity 3s;
   opacity: 0;
   filter: blur(0.5px);
 }
 
+#main-content {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#main-content section {
+  pointer-events: none;
+}
+
+#main-content *:not(section) {
+  pointer-events: auto;
+}
+
+/* ===== INTERACTIVE ELEMENTS ===== */
 .cell {
   display: grid;
   align-self: center;
@@ -123,13 +199,12 @@ body {
   width: 5px;
   height: 5px;
   pointer-events: none;
-  background-color: var(--text-color);
-
+  background-color: var(--text-color-weak);
   border-radius: 100%;
   transition: all 0.5s;
   margin: 10px;
-  box-shadow: 0 0 5px var(--text-color), 0 0 10px var(--text-color),
-    0 0 15px var(--text-color);
+  box-shadow: 0 0 5px var(--text-color-weak), 0 0 10px var(--text-color-weak),
+    0 0 15px var(--text-color-weak);
 }
 
 .star-hover {
@@ -147,4 +222,68 @@ body {
 .star-clicked {
   opacity: 0;
   scale: 0;
+}
+
+/* ===== PAGE SECTIONS ===== */
+
+/* == Introduction == */
+#introduction {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#introduction img {
+  height: 300px;
+  border-radius: 3px;
+}
+
+#introduction h1 {
+  text-align: center;
+}
+
+#scroll-span {
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+#introduction::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  height: 400px;
+  width: 1px;
+  background-color: var(--heading-color);
+  pointer-events: none;
+  backface-visibility: hidden;
+}
+
+/* ===== PAGE SECTIONS ===== */
+#scroll-span span {
+  display: inline-block;
+  animation: wave 4s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  15%,
+  35%,
+  55%,
+  100% {
+    transform: translateY(0);
+    color: var(--heading-color);
+  }
+  5% {
+    transform: translateY(-12px);
+    color: var(--color-accent2);
+  }
+  25% {
+    transform: translateY(-8px);
+    color: var(--color-accent3);
+  }
 }

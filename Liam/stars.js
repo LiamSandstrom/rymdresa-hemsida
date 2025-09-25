@@ -1,10 +1,5 @@
 import { randomInt } from "./helpers.js";
 import { delay } from "./helpers.js";
-//fill entire screen with gridcells
-
-//random chance to populate cell
-
-//random top / bottom : left / right
 
 export class StarsBackground {
   #bgElement;

@@ -1,5 +1,6 @@
 import ItemCarousel from "./itemCarousel.js";
 import { StarsBackground } from "./stars.js";
+import { initScrollAnimation } from "./animations.js";
 
 function initItemCarousel() {
   const itemDiv = document.querySelector("#item-carousel");
@@ -17,6 +18,14 @@ function initStarsBackground() {
   starsBackground.init();
 }
 
-initItemCarousel()
-initStarsBackground();
+function initAnimations() {
+  const span = document.querySelector("#scroll-span");
+  initScrollAnimation(span);
+}
 
+initStarsBackground();
+initAnimations();
+
+/**
+
+**/
