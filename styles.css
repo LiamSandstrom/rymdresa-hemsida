@@ -113,7 +113,7 @@ h3 {
 }
 
 .employee {
-    height: 300px;
+    height: 320px;
     width: 200px;
     border: 1px solid white;
     display: flex;
@@ -139,6 +139,17 @@ h3 {
 
 .employeeText {
     padding: 0.2rem;
+}
+
+.employeeKnapp {
+    outline: none;
+    border: none;
+    background-color: #0c0c0c;
+    color: #c5c6c7; 
+}
+
+.employeeKnapp:hover {
+    transform: scale(1.05);
 }
 
 .footer {
