@@ -24,6 +24,35 @@ body {
   padding: 0;
 }
 
+#menu-toggle {
+  display: none;
+}
+
+#menuIcon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#menu {
+  display: none;
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+#menu-toggle:checked ~ #menu {
+  display: flex;
+  flex-direction: column; 
+  text-align: right;
+}
+
+#menu li a {
+  display: block; 
+  padding: 1rem;
+  text-decoration: none;
+  color: #c5c6c7;
+}
+
 .sections {
   display: flex;
   flex-direction: column;
@@ -49,6 +78,7 @@ h3 {
 .full-section {
   min-height: 100vh;
 }
+
 .our-mission {
   min-height: 50vh;
   flex-direction: column;
@@ -86,9 +116,43 @@ h3 {
 }
 
 .employee {
-  height: 300px;
-  width: 200px;
-  border: 1px solid white;
+    height: 320px;
+    width: 200px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.employee img {
+    height: 40%;
+    border-radius: 10%;
+    margin-top: 2px;
+    width: 50%;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.employee img:hover {
+  transform: scale(1.02);
+}
+
+.employeeText {
+    padding: 0.2rem;
+}
+
+.employeeKnapp {
+    outline: none;
+    border: none;
+    background-color: #0c0c0c;
+    color: #c5c6c7; 
+}
+
+.employeeKnapp:hover {
+    transform: scale(1.05);
 }
 
 .footer {
@@ -190,16 +254,21 @@ h3 {
   }
 }
 header {
-  padding: 1em;
+  padding: 0.5em;
   text-align: right;
-  position: fixed;
   width: 100%;
   background-color: var(--color-bg);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+@media screen and (min-width: 568px){
+  
 #menu {
-  display: none;
+  display: flex;
   list-style-type: none;
+  justify-content: center;
+  gap: 1rem;
 }
 
 #menu-toggle:checked ~ #menu {
@@ -207,6 +276,10 @@ header {
 }
 
 #menu-toggle {
+  display: none;
+}
+
+#menuIcon {
   display: none;
 }
 
@@ -222,7 +295,4 @@ a {
 #menu li a:hover {
   transform: scale(1.2);
 }
-
-.employee img {
-  height: 100%;
 }
