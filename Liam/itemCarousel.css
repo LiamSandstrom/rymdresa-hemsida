@@ -4,7 +4,7 @@
 
 .outerContainer {
   position: relative;
-  border-radius: 10px;
+  border-radius: 0px;
 
   display: flex;
   align-items: center;
@@ -31,7 +31,6 @@
 
   flex-shrink: 0;
   object-fit: cover;
-  border-radius: 10px;
 }
 
 .outerContainer img {

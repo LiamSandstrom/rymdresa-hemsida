@@ -8,6 +8,8 @@ function initItemCarousel() {
   const itemDiv = document.querySelector("#item-carousel");
   const itemCarousel = new ItemCarousel(itemDiv, {
     loop: true,
+    height: "400px",
+    width: "310px",
   });
   itemDiv.appendChild(itemCarousel.getElement());
 }
@@ -29,6 +31,7 @@ async function initAnimationsWithDelay(ms) {
   initScrollAnimation(span);
 }
 
+initItemCarousel();
 initStarsBackground();
 initAnimationsWithDelay(100);
 
