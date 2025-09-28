@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" type="module"></script>
     <title>Document</title>
   </head>
   <body>
     <header>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" id="menuIcon"><img src="images/menuicon.png" alt=""></label>
-        <ul id="menu">
-            <li><a href="#ourMission">Our Mission</a></li>
-            <li><a href="#employees">Employee</a></li>
-            <li><a href="#contactStuff">Contact</a></li>
-        </ul>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" id="menuIcon">
+        <img src="images/menuicon.png" alt="Menyikon" />
+      </label>
+      <ul id="menu">
+        <li><a href="#ourMission">Our Mission</a></li>
+        <li><a href="#employeesHeading">Employee</a></li>
+        <li><a href="#contactStuff">Contact</a></li>
+      </ul>
     </header>
+
     <div class="sections">
       <section class="full-section introduction">
         <h1 id="galaxium">Galaxium Voyages</h1>
@@ -28,6 +32,7 @@
         </div>
         
       </section>
+
       <section class="our-mission" id="ourMission">
         <h2>Our Mission</h2>
         <p>
@@ -40,66 +45,101 @@
           eleganta rymdfarkoster, förvandlar vi varje resa till ett oförglömligt
           äventyr. Oavsett om du söker stillhet bland stjärnstoft eller spänning
           i okända system, har vi en destination som passar din kosmiska
-          längtan. ✨ 
+          längtan.
         </p>
-        <p>
-            Res inte bara bort — res bortom.
-        </p>
-        <p>
-            Galaxium Voyages - where the cosmos becomes your playground
-        </p>
+        <p>Res inte bara bort — res bortom.</p>
+        <p>Galaxium Voyages - where the cosmos becomes your playground</p>
       </section>
-      <h2>Employees</h2>
+
       <section class="full-section employees" id="employees">
-        <div class="employee"><img src="images/BlueProfile.png" alt="">
-        <div class="employeeText">
-            <p>
-                Pontus
-            </p>
+        <h2 id="employeesHeading">Employees</h2>
+        <div id="employee-container">
+          <div class="employee">
+            <img src="images/BlueProfile.png" alt="Profilbild Pontus" />
+            <div class="employeeText">
+              <p>Pontus</p>
+              <p>
+                Arbetar som verkställande direktör. Tar de övergripande och
+                slutgiltiga besluten inom företaget.
+              </p>
+              <a class="employeeKnapp" href="Pontus/pontus.html"
+                >Klicka här →</a
+              >
+            </div>
+          </div>
+          <div class="employee">
+            <img src="images/GreenProfile.png" alt="Profilbild David" />
+            <div class="employeeText">
+              <p>David</p>
+              <p>
+                Arbetar som ruttchef. Forskar fram nya rutter som företaget kan
+                erbjuda till kunder.
+              </p>
+              <a class="employeeKnapp" href="David/david.html">Klicka här →</a>
+            </div>
+          </div>
+          <div class="employee">
+            <img src="images/PurpleProfile.png" alt="Profilbild Måns" />
+            <div class="employeeText">
+              <p>Måns</p>
+              <p>
+                Arbetar som mekaniker. Underhåller och reparerar farkosterna som
+                tar kunderna genom galaxerna.
+              </p>
+              <a class="employeeKnapp" href="Måns/måns.html">Klicka här →</a>
+            </div>
+          </div>
+          <div class="employee">
+            <img src="images/RedProfile.png" alt="Profilbild Liam" />
+            <div class="employeeText">
+              <p>Liam</p>
+              <p>
+                Arbetar som ekonomichef. Lägger budgeten för hela företaget och
+                tar fram priser för resorna.
+              </p>
+              <a class="employeeKnapp" href="Liam/liam.html">Klicka här →</a>
+            </div>
+          </div>
+          <div class="employee">
+            <img src="images/YellowProfile.png" alt="Profilbild Lucas" />
+            <div class="employeeText">
+              <p>Lucas</p>
+              <p>
+                Arbetar som chaufför. Kör farkosterna genom galaxer på våra
+                framtagna rutter.
+              </p>
+              <a class="employeeKnapp" href="Lucas/lucas.html">Klicka här →</a>
+            </div>
+          </div>
         </div>
-        </div>
-        <div class="employee"><img src="images/GreenProfile.png" alt="">
-        <div class="employeeText">
-            <p>
-                David
-            </p>
-        </div>
-        </div>
-        <div class="employee"><img src="images/PurpleProfile.png" alt="">
-        <div class="employeeText">
-            <p>
-                Måns
-            </p>
-        </div>
-        </div>
-        <div class="employee"><img src="images/RedProfile.png" alt="">
-        <div class="employeeText">
-            <p>
-                Liam
-            </p>
-        </div>
-        </div>
-        <a href="Lucas/lucas.html">
-        <div class="employee"><img src="images/YellowProfile.png" alt="">
-        <div class="employeeText">
-            <P>
-                Lucas
-            </P>
-        </div>
-        </div>
-        </a>
       </section>
     </div>
+
     <footer class="footer" id="contactStuff">
       <h3>Contact us!</h3>
-      <div class="contact">
-        <input type="text" id="first-name" placeholder="First name" />
-        <input type="text" id="last-name" placeholder="Last name" />
-        <input type="text" id="email" placeholder="Email address" />
-        <input type="text" id="phonenumber" placeholder="Phone number" />
-        <input type="text" id="message" placeholder="Message" />
-        <button id="button">Submit</button>
-      </div>
+      <form class="contact">
+        <div id="first-name-div">
+          <input type="text" id="first-name" placeholder="First name" />
+          <p id="first-name-text"></p>
+        </div>
+        <div id="last-name-div">
+          <input type="text" id="last-name" placeholder="Last name" />
+          <p id="last-name-text"></p>
+        </div>
+        <div id="email-div">
+          <input type="email" id="email" placeholder="Email address" />
+          <p id="email-text"></p>
+        </div>
+        <div id="phonenumber-div">
+          <input type="tel" id="phonenumber" placeholder="Phone number" />
+          <p id="phonenumber-text"></p>
+        </div>
+        <div id="message-div">
+          <input type="text" id="message" placeholder="Message" />
+          <p id="message-text"></p>
+        </div>
+        <button id="button" type="submit">Submit</button>
+      </form>
     </footer>
   </body>
 </html>
