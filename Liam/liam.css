@@ -30,6 +30,9 @@ body,
 button {
   font-family: sans-serif;
 }
+button {
+  cursor: pointer;
+}
 
 body {
   background-color: var(--color-bg);
@@ -40,6 +43,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 img {
@@ -179,10 +183,9 @@ button {
 #main-content {
   position: relative;
   z-index: 1;
-  width: 90%;
+  width: 95%;
   max-width: 1000px;
   pointer-events: none;
-  overflow: hidden;
 }
 
 #main-content section {
@@ -246,7 +249,7 @@ button {
 /* == Introduction == */
 
 #introduction {
-  margin-top: 200px;
+  margin-top: 25vh;
   position: relative;
   justify-items: center;
 }
@@ -375,9 +378,9 @@ button {
 /* == Projects == */
 
 #projects {
-  margin-top: 350px;
+  margin-top: 300px;
   gap: 32px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   overflow: visible;
 }
 
@@ -444,9 +447,6 @@ button {
   justify-self: center;
 }
 
-.orbit:hover {
-}
-
 .planet {
   --size: 25px;
   width: var(--size);
@@ -457,21 +457,21 @@ button {
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--text-color);
+  background: var(--heading-color);
 
   will-change: height;
   transition: transform 0.2s;
   transform-origin: 0%;
+  cursor: pointer;
 }
 
 .planet:hover {
-  background: var(--heading-color);
+  border: 2px solid var(--color-accent2);
 }
 
 #projects .planet-selected {
   transform: scale(1.2) translate(-50%, -50%);
-  border: 2px solid var(--color-accent2);
-  background: var(--heading-color);
+  background: var(--color-accent2);
 }
 
 #projects #project-text {
@@ -504,7 +504,7 @@ button {
 #projects #project {
   grid-column: 1 / -1;
   align-self: center;
-  height: 250px;
+  height: 300px;
   width: 100%;
   border: 1px solid white;
 }
@@ -512,7 +512,7 @@ button {
 #projects #project img {
   height: 100%;
   width: 100%;
-  
+
   object-fit: cover;
 }
 
@@ -559,11 +559,19 @@ button {
     gap: 48px;
   }
 
+  #about-me .content,
+  #projects #project-text,
+  #projects #titles{
+    transition: border 2s;
+  }
+
   #about-me .content {
     position: relative;
     grid-column: 5 / -1;
     grid-row: 1 / 2;
     width: 100%;
+    border-left: 1px solid white;
+    padding-left: 20px;
   }
 
   #about-me .content::after {
@@ -573,7 +581,7 @@ button {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 16px;
-    height: 400px;
+    height: 0px;
     width: 1px;
     background-color: var(--heading-color);
     pointer-events: none;
@@ -595,7 +603,8 @@ button {
   }
 
   #projects {
-    margin-top: 220px;
+    margin-top: 80px;
+    margin-bottom: 100px;
     gap: 8px;
   }
 
@@ -619,12 +628,18 @@ button {
     grid-column: 1 / 5;
     grid-row: 3/4;
     align-self: flex-start;
+    border-left: 1px solid white;
+    padding-left: 12px;
+    height: min-content;
   }
 
   #projects #titles {
     margin-top: 40px;
     grid-column: 5/ -1;
     grid-row: 4/5;
+    border-left: 1px solid white;
+    padding-left: 12px;
+    height: min-content;
   }
 
   #projects #project {
