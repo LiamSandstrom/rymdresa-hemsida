@@ -279,8 +279,12 @@ header {
   gap: 1rem;
 }
 
+#menu li{
+  display: inline;
+}
+
 #menu-toggle:checked ~ #menu {
-  display: block;
+  flex-direction: row;
 }
 
 #menu-toggle {
@@ -302,5 +306,6 @@ a {
 
 #menu li a:hover {
   transform: scale(1.2);
+  color: var(--color-heading);
 }
 }
