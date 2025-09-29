@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="liam.css" />
     <link rel="stylesheet" href="itemCarousel.css" />
     <script src="liam.js" type="module"></script>
@@ -49,13 +50,13 @@
             voluptatem. Fugiat amet illum quis.
           </p>
         </div>
-        <div id="item-carousel">
+        <div id="item-carousel" class="animate-on-scroll">
           <img src="Bellion.jpg" alt="" />
           <img src="Bellion.jpg" alt="" />
           <img src="Bellion.jpg" alt="" />
         </div>
         <div id="skillbar-container">
-          <div class="skillbar-wrapper">
+          <div class="skillbar-wrapper animate-on-scroll">
             <div class="text-wrapper">
               <h6>Flying</h6>
               <p>99%</p>
@@ -64,7 +65,7 @@
               <div class="skillbar-progress"></div>
             </div>
           </div>
-          <div class="skillbar-wrapper">
+          <div class="skillbar-wrapper animate-on-scroll">
             <div class="text-wrapper">
               <h6>Star knowledge</h6>
               <p>99%</p>
@@ -73,7 +74,7 @@
               <div class="skillbar-progress"></div>
             </div>
           </div>
-          <div class="skillbar-wrapper">
+          <div class="skillbar-wrapper animate-on-scroll">
             <div class="text-wrapper">
               <h6>Survival skills</h6>
               <p>99%</p>
@@ -82,6 +83,38 @@
               <div class="skillbar-progress"></div>
             </div>
           </div>
+        </div>
+      </section>
+      <section id="projects">
+        <h2 class="animate-on-scroll">Projects</h2>
+        <div id="project-selection-buttons" class="animate-on-scroll"></div>
+        <div id="project-selection" class="animate-on-scroll"></div>
+        <div id="project-text" class="animate-on-scroll">
+          <h4 id="planet-title-text">Tellus</h4>
+          <p id="planet-info-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Laboriosam, doloribus eum et quo nam hic vitae similique corporis
+            voluptatem quia corrupti sunt a nulla voluptatibus quidem repellat
+            temporibus modi accusamus.
+          </p>
+        </div>
+        <div id="titles" class="animate-on-scroll">
+          <h4>Planet Information</h4>
+          <div class="title-container">
+            <h5>Customer:</h5>
+            <p id="planet-customer-text">Flowers AB</p>
+          </div>
+          <div class="title-container">
+            <h5>Degrees:</h5>
+            <p id="planet-degrees-text">37c</p>
+          </div>
+          <div class="title-container">
+            <h5>Travel time:</h5>
+            <p id="planet-traveltime-text">341 Light years</p>
+          </div>
+        </div>
+        <div id="project">
+          <img src="Bellion.jpg" alt="">
         </div>
       </section>
     </main>
