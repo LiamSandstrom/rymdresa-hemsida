@@ -1,0 +1,33 @@
+[
+    {
+        "titel": "Kryotransport av Värdefullt Datalager",
+        "kund": "Aethel Corp. - Interstellar Data Solutions",
+        "beskrivning": "Leverans av en kryoförvarad server (känd som Nexus-kuben) innehållande kritiska, oersättliga forskningsdata från Proxima-systemet till ett högsäkerhetsvalv på Jupiters måne Europa.",
+        "information": "Detta var en tidskritisk och extremt känslig leverans. Skakningar på över 0,05 G kunde skada datan permanent. Jag använde en specialkalibrerad antigravitationsplattform i lastutrymmet och flög manuellt genom de täta asteroiderna i Kuiperbältet för att garantera en absolut jämn och skakfri resa. Detta uppdrag etablerade mig som en av de mest pålitliga transporterna för känslig, högvärdig last."
+    },
+    {
+        "titel": "Evakuering av Koloni Zeta-9",
+        "kund": "Galactic Humanitarian Services (GHS)",
+        "beskrivning": "Snabb och diskret transport av nödhjälp och nyckelpersonal från den kollapsande gruvkolonin på Zeta-9, belägen i den instabila Tårbågsskytten-sektorn.",
+        "information": "Uppdraget krävde användning av mitt tysta överljuds-läge för att undvika piratpatruller. Lasten bestod av livsuppehållande system, medicinsk utrustning och 400 kolonister. Jag var tvungen att navigera genom ett oväntat meteorregn vid ankomsten, men leveransen och evakueringen slutfördes 3 timmar före schemat."
+    },
+    {
+        "titel": "Etablering av Ny Handelsrutt (K-33)",
+        "kund": "The Outer Rim Freight Consortium",
+        "beskrivning": "Pilotera det första kommersiella lastfartyget längs den nyberäknade, energisnåla K-33-rutten mellan gasjätten Xylos och den industriella stationen Torshamn.",
+        "information": "Syftet var att bevisa ruttens lönsamhet. Jag fick agera scout, pilot och säkerhetsansvarig samtidigt som jag loggade in alla nödvändiga navigeringspunkter. Rutten korsade ett tidigare okartlagt magnetfält, vilket krävde att jag stängde av fartygets automatiska stabilisatorer och navigerade helt på gamla skolans stjärnkort. Resultatet blev en 20% bränslebesparing jämfört med den gamla rutten, vilket nu har öppnat upp för reguljär trafik."
+    },
+    {
+        "titel": "Nödfrakt till Mörka Sidan (Projekt Skugglöpare)",
+        "kund": "Rymdstation Persephones Öga (Tättslutande säkerhet)",
+        "beskrivning": "Leverans av kritiska fusionsreaktor-delar till en säkerhetsstation som ligger i permanent skugga bakom en obeboelig super-planet. Extremt farlig inflygning.",
+        "information": "Stationen var nödsatt på grund av ett kraftigt strålfält. Min uppgift var att flyga farkosten genom ett område med hög strålningsrisk, där all automatiserad navigeringsutrustning hade slagits ut. Jag var tvungen att lita helt på inertial-navigering och visuell bedömning. Väl framme krävdes en precisionsdockning i nästan totalt mörker, en manöver som endast den mest erfarna piloten kunde klara av. Levererad 48 timmar innan kritiskt systemfel."
+    },
+    {
+        "titel": "Den Flyktiga Kometen (Ruttverifiering)",
+        "kund": "Universal Astrogation Guild (UAG)",
+        "beskrivning": "Utföra en exakt följd av korta mikro-hopp för att verifiera en ny, dynamisk navigationsrutt som använder sig av en kometkärnas temporära gravitationsfält.",
+        "information": "Detta var ett uppdrag i hög G-kraft och risk. Istället för att bara resa mellan stjärnorna, handlade detta om att flyga med en komet i rörelse för att få en slunga (sling-shot) som kapade restiden med veckor. Det krävde kvarts-sekunds precision vid varje hopp, eftersom en felmarginal på bara några meter hade inneburit att farkosten dragits sönder av kometens kärna. Jag slutförde de 12 hoppen perfekt, och UAG godkände rutten som en ny standard."
+    }
+    
+]
