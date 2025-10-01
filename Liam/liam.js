@@ -89,8 +89,3 @@ initAnimationsWithDelay(100);
 initGalaxy();
 initSkillbars();
 
-/**
-bugs:
- * star:
- ** mouseenter -> mouseleave -> mouseenter before mouseleave animation starts leads to mouseleave playing even when hovering
-**/

@@ -2,33 +2,48 @@
   "projects": [
     {
       "title": "Mars Terraform Initiative",
+      "about": "This planet is a frozen world of towering glaciers and endless snow. Its surface is harsh and silent, yet beneath the ice, hidden seas may hold secrets of survival and life.",
       "customer": "SpaceX Industries",
-      "degrees": 0,
-      "travelTime": 13
+      "degrees": -293,
+      "travelTime": 13,
+      "image": "../liam/images/icePlanet.jpeg",
+      "color": "#7FDBFF"
     },
     {
       "title": "Europa Mining Outpost",
+      "about": "This planet is a machine-covered world of smoke, fire, and steel. Vast engines and refineries stretch endlessly, shaping a realm of power and ceaseless production.",
       "customer": "Asteroid Mining Corp",
       "degrees": 72,
-      "travelTime": 69
+      "travelTime": 69,
+      "image": "../liam/images/factoryPlanet.jpeg",
+      "color": "#FF8C42"
     },
     {
       "title": "Titan Research Station",
+      "about": "This planet is a barren sphere cloaked in silence and shadow. With no water, air, or light, it is a place of emptiness, mystery, and eternal stillness.",
       "customer": "Galactic Science Foundation",
       "degrees": 144,
-      "travelTime": 44 
+      "travelTime": 204,
+      "image": "../liam/images/voidPlanet.jpeg",
+      "color": "#6A5ACD"
     },
     {
       "title": "Proxima b Colony",
+      "about": "This jungle planet is a vibrant world where nature rules. Canopies shelter creatures, the air thick with moisture, and shadows hide mystery. It’s a realm of beauty, danger, and wonder.",
       "customer": "Interstellar Ventures LLC",
       "degrees": 216,
-      "travelTime": 103
+      "travelTime": 103,
+      "image": "../liam/images/junglePlanet.jpeg",
+      "color": "#28A745"
     },
     {
       "title": "Kepler-452b Expedition",
+      "about": "This planet is a vast ocean with no land in sight. Waves rise and fall endlessly, hiding strange creatures and submerged worlds. It is a realm of depth, motion, and endless blue horizons.",
       "customer": "Deep Space Exploration Inc",
-      "degrees": 288,
-      "travelTime": 244
+      "degrees": 31,
+      "travelTime": 244,
+      "image": "../liam/images/waterPlanet.jpeg",
+      "color": "#1E90FF"
     }
   ]
 }

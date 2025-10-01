@@ -50,6 +50,7 @@ export default class GalaxyController {
 
   #handlePlanetClick(planet) {
     const previousPlanet = this.#galaxy.getSelectedPlanet();
+    if(planet === previousPlanet) return;
     this.#galaxy.planetClicked(planet);
     const selectedPlanet = this.#galaxy.getSelectedPlanet();
     

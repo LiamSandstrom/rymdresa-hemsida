@@ -52,6 +52,10 @@ img {
   -ms-user-select: none;
 }
 
+b{
+  color: var(--heading-color);
+}
+
 /* ===== TYPOGRAPHY ===== */
 h1,
 h2,
@@ -485,6 +489,7 @@ button {
 #projects .planet-selected {
   transform: scale(1.2) translate(-50%, -50%);
   background: var(--color-accent2);
+  border: 2px solid var(--color-accent3);
 }
 
 #projects #project-text {

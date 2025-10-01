@@ -9,6 +9,8 @@ export default class GalaxyUI {
   #travelTimeEl;
   #titleEl;
   #infoElements;
+  #image;
+  #aboutText;
 
   constructor(container) {
     this.#container = container;
@@ -25,6 +27,8 @@ export default class GalaxyUI {
     this.#degreesEl = document.querySelector("#planet-degrees-text");
     this.#travelTimeEl = document.querySelector("#planet-traveltime-text");
     this.#titleEl = document.querySelector("#planet-title-text");
+    this.#image = document.querySelector("#planet-image");
+    this.#aboutText = document.querySelector("#planet-info-text");
   }
 
   init(buttons) {
@@ -61,6 +65,7 @@ export default class GalaxyUI {
   createPlanetElement(planet, clickCallback) {
     const element = document.createElement("div");
     element.classList.add("planet");
+    element.style.background = planet.getColor();
     element.addEventListener("click", () => {
       clickCallback(planet);
     });
@@ -100,9 +105,12 @@ export default class GalaxyUI {
 
     this.animateText();
     this.#customerEl.textContent = planet.getCustomer();
-    this.#degreesEl.textContent = planet.getDegrees();
-    this.#travelTimeEl.textContent = planet.getTravelTime();
+    this.#degreesEl.textContent = planet.getDegrees() + "°C";
+    this.#travelTimeEl.textContent = planet.getTravelTime() + " lightyears";
     this.#titleEl.textContent = planet.getTitle();
+    this.#aboutText.textContent = planet.getAbout();
+    console.log(planet.getImage())
+    this.#image.src = planet.getImage();
   }
 
   #findOrbitForPlanet(planetElement) {

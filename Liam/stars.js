@@ -103,7 +103,6 @@ export class StarsBackground {
 
   async #cellLeave(e) {
     const cell = e.target;
-    console.log(cell)
     cell.leaveTimeout = setTimeout(() => {
       for (const child of cell.children) {
         child.style.transition = "all 0.9s";

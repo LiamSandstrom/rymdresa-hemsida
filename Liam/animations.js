@@ -14,7 +14,10 @@ export function initAppearAnimation() {
         observer.unobserve(entry.target);
       }
     });
-  });
+  },
+  {threshold: 0.4}
+
+);
 
   document.querySelectorAll(".animate-on-scroll").forEach((el) => {
     observer.observe(el);
