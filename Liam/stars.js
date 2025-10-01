@@ -6,12 +6,23 @@ export class StarsBackground {
   #cells;
   #cellSize;
   #starSpawnChance;
+  #bufferMultiplier;
+  #currentHeight;
+  #currentWidth;
+  #currentSize;
 
-  constructor(bgElement, cellSize, { starSpawnChance = 3 } = {}) {
+  constructor(
+    bgElement,
+    cellSize,
+    { starSpawnChance = 3, bufferMultiplier = 1.1 } = {}
+  ) {
     this.#bgElement = bgElement;
     this.#cellSize = cellSize;
     this.#starSpawnChance = starSpawnChance;
     this.#cells = [];
+    this.#bufferMultiplier = bufferMultiplier;
+    this.#currentHeight = 0;
+    this.#currentWidth = 0;
   }
 
   init() {
@@ -25,7 +36,6 @@ export class StarsBackground {
     this.#bgElement.style.opacity = "100%";
 
     window.addEventListener("resize", () => {
-      this.#bgElement.innerHTML = "";
       this.#createBackground();
     });
   }
@@ -34,8 +44,19 @@ export class StarsBackground {
     const pageWidth = document.documentElement.scrollWidth;
     const pageHeight = document.documentElement.scrollHeight;
 
-    const cols = Math.floor(pageWidth / this.#cellSize);
-    const rows = Math.floor(pageHeight / this.#cellSize);
+    if (pageWidth * pageHeight < this.#currentSize) {
+      return;
+    }
+
+    this.#bgElement.innerHTML = "";
+
+    this.#currentWidth = pageWidth * this.#bufferMultiplier;
+    this.#currentHeight = pageHeight * this.#bufferMultiplier;
+    this.#currentSize = this.#currentHeight * this.#currentWidth;
+
+    const cols = Math.floor(this.#currentWidth / this.#cellSize);
+    const rows = Math.floor(this.#currentHeight / this.#cellSize);
+    console.log("AH");
 
     for (let r = 0; r < rows; r++) {
       for (let c = 0; c < cols; c++) {

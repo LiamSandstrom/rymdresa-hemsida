@@ -68,7 +68,6 @@ function initSkillbars() {
         if (entry.isIntersecting) {
           const bar = entry.target;
           const percent = bar.dataset.percent + "%";
-          console.log("hi");
 
           bar.style.width = percent;
 

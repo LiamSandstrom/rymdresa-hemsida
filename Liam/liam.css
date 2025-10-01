@@ -42,6 +42,7 @@ body {
   align-items: center;
   flex-direction: column;
   overflow-x: hidden;
+  position: relative;
 }
 
 img {
@@ -176,6 +177,7 @@ button {
   transition: opacity 3s;
   opacity: 0;
   filter: blur(0.5px);
+  overflow: hidden;
 }
 
 #main-content {

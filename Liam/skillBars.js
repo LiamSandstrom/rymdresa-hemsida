@@ -8,7 +8,6 @@ export class Skillbar {
     this.#progress = progress;
     this.#percent = percent;
 
-    console.log(text)
     this.#text.textContent = this.#percent + "%";
     this.#progress.dataset.percent = percent;
   }
