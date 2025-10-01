@@ -56,7 +56,6 @@ export class StarsBackground {
 
     const cols = Math.floor(this.#currentWidth / this.#cellSize);
     const rows = Math.floor(this.#currentHeight / this.#cellSize);
-    console.log("AH");
 
     for (let r = 0; r < rows; r++) {
       for (let c = 0; c < cols; c++) {
@@ -75,6 +74,7 @@ export class StarsBackground {
     const div = document.createElement("div");
     div.classList.add("cell");
     div.style.height = `${this.#cellSize}px`;
+    div.leaveTimeout = null;
 
     div.addEventListener("mouseenter", this.#cellEnter);
     div.addEventListener("mouseleave", this.#cellLeave);
@@ -88,6 +88,12 @@ export class StarsBackground {
 
   #cellEnter(e) {
     const cell = e.target;
+
+    if (cell.leaveTimeout) {
+      clearTimeout(cell.leaveTimeout);
+      cell.leaveTimeout = null;
+    }
+
     for (const child of cell.children) {
       child.style.transition = "all 0.25s ease";
       child.classList.add("star-hover");
@@ -97,15 +103,17 @@ export class StarsBackground {
 
   async #cellLeave(e) {
     const cell = e.target;
-    await delay(500);
-    for (const child of cell.children) {
-      child.style.transition = "all 0.9s";
-      child.classList.remove("star-hover");
-    }
+    console.log(cell)
+    cell.leaveTimeout = setTimeout(() => {
+      for (const child of cell.children) {
+        child.style.transition = "all 0.9s";
+        child.classList.remove("star-hover");
+      }
+      cell.leaveTimeout = null;
+    }, 500);
   }
 
   async #cellClick(e) {
-    console.log(e);
     const cell = e.target;
     for (const child of cell.children) {
       child.classList.add("star-clicked-begin");

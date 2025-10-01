@@ -90,9 +90,6 @@ initGalaxy();
 initSkillbars();
 
 /**
- Todo: 
- Animate skillbars
- Add blackhole witnessed bar and +1 on blackhole
 bugs:
  * star:
  ** mouseenter -> mouseleave -> mouseenter before mouseleave animation starts leads to mouseleave playing even when hovering
