@@ -8,6 +8,7 @@
   --color-accent3: #ee7762;
   --text-color: #c5c6c7;
   --text-color-weak: #c5c6c732;
+  --text-color-mediumweak: #d8d9db37;
   --heading-color: #ffffff;
 
   --heading-weight: 300;
@@ -47,9 +48,6 @@ body {
 
 img {
   user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 
 b{
@@ -197,7 +195,7 @@ button {
 }
 
 #main-content *:not(section, div) {
-  pointer-events: auto;
+  pointer-events:all;
 }
 
 /* ===== INTERACTIVE ELEMENTS ===== */
@@ -211,7 +209,7 @@ button {
   width: 5px;
   height: 5px;
   pointer-events: none;
-  background-color: var(--text-color-weak);
+  background-color: var(--text-color-mediumweak);
   border-radius: 100%;
   transition: all 0.5s;
   margin: 10px;
@@ -312,7 +310,7 @@ button {
 #item-carousel {
   grid-column: 1 / -1;
   justify-self: center;
-  pointer-events: auto;
+  pointer-events: all;
 }
 
 /* == Skill bars == */
@@ -322,7 +320,7 @@ button {
   display: flex;
   gap: 8px;
   flex-direction: column;
-  pointer-events: auto;
+  pointer-events: all;
 }
 
 #skillbar-container::after {
@@ -408,7 +406,7 @@ button {
 #project-selection {
   position: relative;
   justify-self: center;
-  pointer-events: auto;
+  pointer-events: all;
   grid-column: 1 / -1;
   width: 330px;
   height: 330px;
@@ -465,9 +463,8 @@ button {
 }
 
 .planet {
-  --size: 25px;
-  width: var(--size);
-  height: var(--size);
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
 
   position: absolute;
@@ -480,6 +477,7 @@ button {
   transition: transform 0.2s;
   transform-origin: 0%;
   cursor: pointer;
+  box-shadow: 0px 0px 3px 2px rgba(221, 217, 217, 0.327);
 }
 
 .planet:hover {
@@ -489,7 +487,9 @@ button {
 #projects .planet-selected {
   transform: scale(1.2) translate(-50%, -50%);
   background: var(--color-accent2);
-  border: 2px solid var(--color-accent3);
+  border: 2px solid var(--color-accent2);
+  filter: saturate(2);
+  box-shadow: 0px 0px 15px 7px rgba(220, 158, 65, 0.343);
 }
 
 #projects #project-text {
@@ -739,7 +739,6 @@ header {
   padding: 10px;
   flex-direction: column;
 
-  background-color: var();
   border-bottom: 1px solid var(--color-second-bg);
   pointer-events: none;
 }
@@ -751,7 +750,7 @@ header {
 #menuIcon {
   display: inline-block;
   cursor: pointer;
-  pointer-events: auto;
+  pointer-events: all;
 }
 
 #menu {
@@ -759,7 +758,7 @@ header {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  pointer-events: auto;
+  pointer-events: all;
 }
 
 #menu-toggle:checked ~ #menu {

@@ -109,7 +109,6 @@ export default class GalaxyUI {
     this.#travelTimeEl.textContent = planet.getTravelTime() + " lightyears";
     this.#titleEl.textContent = planet.getTitle();
     this.#aboutText.textContent = planet.getAbout();
-    console.log(planet.getImage())
     this.#image.src = planet.getImage();
   }
 
