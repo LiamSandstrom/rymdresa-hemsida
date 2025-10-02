@@ -14,7 +14,7 @@ export default class GalaxyController {
   }
 
   async init() {
-    const data = await axios.get("./liam/projects.json");
+    const data = await axios.get("projects.json");
     const projects = data.data.projects;
     
     for (let i = 0; i < projects.length; i++) {
