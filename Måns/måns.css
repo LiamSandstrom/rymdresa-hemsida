@@ -166,12 +166,12 @@ a {
 
 .projekt-container {
   padding: 2rem;
-  background-color: #0b0c1e;
+  background-color: var(--color-bg);
   color: #ffffff;
 }
 
 .projekt-item {
-  background-color: #1f2235;
+  background-color: var(--color-surface);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
