@@ -6,7 +6,7 @@
       "customer": "SpaceX Industries",
       "degrees": -293,
       "travelTime": 13,
-      "image": "../liam/images/icePlanet.jpeg",
+      "image": "images/icePlanet.jpeg",
       "color": "#7FDBFF"
     },
     {
@@ -15,7 +15,7 @@
       "customer": "Asteroid Mining Corp",
       "degrees": 72,
       "travelTime": 69,
-      "image": "../liam/images/factoryPlanet.jpeg",
+      "image": "images/factoryPlanet.jpeg",
       "color": "#FF8C42"
     },
     {
@@ -24,7 +24,7 @@
       "customer": "Galactic Science Foundation",
       "degrees": 144,
       "travelTime": 204,
-      "image": "../liam/images/voidPlanet.jpeg",
+      "image": "images/voidPlanet.jpeg",
       "color": "#6A5ACD"
     },
     {
@@ -33,7 +33,7 @@
       "customer": "Interstellar Ventures LLC",
       "degrees": 216,
       "travelTime": 103,
-      "image": "../liam/images/junglePlanet.jpeg",
+      "image": "Images/junglePlanet.jpeg",
       "color": "#28A745"
     },
     {
@@ -42,7 +42,7 @@
       "customer": "Deep Space Exploration Inc",
       "degrees": 31,
       "travelTime": 244,
-      "image": "../liam/images/waterPlanet.jpeg",
+      "image": "images/waterPlanet.jpeg",
       "color": "#1E90FF"
     }
   ]
