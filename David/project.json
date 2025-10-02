@@ -1,0 +1,42 @@
+[
+    {
+        "Titel": "Slingring genom Magnetstormarna i Vega",
+        "Kund": "Kund: AstroPulse Adventures",
+        "Beskrivning": "Beskrivning: En elektrisk resa genom magnetiska stormar runt stjärnan Vega, där skeppet drivs av naturliga plasmaflöden och passagerarna får se blixtar dansa över skeppets skrov.",
+        "Info": "Info: Jag, David Söderqvist, upptäckte denna rutt under ett test av vårt nya magnetfältsskydd. När jag navigerade genom stormarna insåg jag att de kunde användas som en naturlig energikälla. Nu är det en favorit bland teknikentusiaster och äventyrare som vill känna kraften i universum på nära håll."
+
+    },
+    {
+        "Titel": "Navigering genom Nebulosa X-47",
+        "Kund": "Kund: Stellar Horizons Inc",
+        "Beskrivning":"Beskrivning: En exklusiv rymdresa genom den mystiska och färgsprakande nebulosan X-47, där varje passagerare får sin egen gravitationsbubbla.",
+        "Info": "Info: Denna rutt upptäcktes av mig, David Söderqvist, under ett rutinuppdrag i Orionbältet. Jag råkade svänga fel vid en kvantport och hamnade mitt i ett gravitationsfält som visade sig vara perfekt för lyxresor. Sedan dess har resan blivit en favorit bland intergalaktiska äventyrare."
+    },
+    {
+        "Titel": "Expedition till Svarta Hålet Zeta-9",
+        "Kund": "Kund: Quantum Drift Travel Co.",
+        "Beskrivning": "Beskrivning: En adrenalinfylld resa till kanten av ett stabilt svart hål, där passagerare får uppleva tidens förvrängning i realtid, utan att bli uppslukade.",
+        "Info": "Info: Denna rutt upptäcktes av mig, David Söderqvist, under ett testflyg med vår nya anti-gravitationskapsel. Jag märkte att Zeta-9:s gravitationsfält skapar en perfekt bana för att cirkla runt hålet utan att gå förlorad. Nu är det en av våra mest eftertraktade äventyrsresor för de modiga."
+
+    },
+    {
+        "Titel": "Kryssning genom Kristallbältet",
+        "Kund": "Kund: Celestial Cruise Lines",
+        "Beskrivning": "Beskrivning: En glittrande resa genom ett asteroidbälte bestående av lysande kristaller som reflekterar stjärnljus i tusen färger, perfekt för romantiska middagar i omloppsbana.",
+        "Info":"Info: Jag, David Söderqvist, snubblade över denna rutt när jag följde ett gammalt stjärnkartsmisstag. Istället för att hamna i ett tomt område, fann jag ett bälte av kristalliserade asteroider som skapar ett spektakulärt ljusspel. Nu är det en av våra mest bokade rutter för bröllopsresor i rymden."
+
+    },
+    {
+        "Titel": "Utforskning av Dimhöljda Dvärggalaxen",
+        "Kund": "Kund: NovaLux Interstellar",
+        "Beskrivning": "Beskrivning: En mystisk resa till en dvärggalax täckt av kosmisk dimma, där stjärnorna blinkar som eldflugor och gravitationen känns som att gå på moln.",
+        "Info": "Info: Jag, David Söderqvist, upptäckte denna rutt när jag följde ett svagt radiosignalspår från en gammal sond. Den ledde mig till en dold galax bakom ett nebulosaskikt. Nu erbjuder vi resor dit för de som söker stillhet, skönhet och en känsla av att vara helt bortom tid och rum."
+
+    },
+    {
+        "Titel": "Tidsresa genom Krono-Korridoren",
+        "Kund": "Kund: Eternity Expeditions",
+        "Beskrivning": "Beskrivning: En exklusiv rymdresa genom ett temporalt flöde där passagerare får uppleva olika tidsepoker i universums historia, från Big Bang till framtidens galaxer.",
+        "Info": "Info: Jag, David Söderqvist, upptäckte denna rutt när jag testade en ny kvantnavigatör som råkade skapa en loop i rumtiden. Istället för att fastna, lyckades jag kartlägga en säker väg genom korridoren. Nu erbjuder vi resor där tiden är en destination i sig."
+    }
+]

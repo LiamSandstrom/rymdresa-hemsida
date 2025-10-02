@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="måns.css" >
     <title>Document</title>
 </head>
 <body>
-    <h1>Hejsan</h1>
+    <header>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="menuIcon">
+            <img src="MånsImages/menuicon.png" alt="menyikon">
+        </label>
+        <ul id="menu">
+            <li><a href="../index.html">Hem</a></li>
+            <li><a href="#bildspelRubrik">Bildspel</a></li>
+            <li><a href="#minaProjekt">Mina projekt</a></li>
+        </ul>
+    </header>
+
+    <div class="introduktion-container">
+        <div class="introduktion-item rubrik">
+            <h1>Mekaniker Måns</h1>
+        </div>
+        <div class="introduktion-item bild">
+            <img src="MånsImages/profilbild.png" alt="en bild på en astronaut-mekaniker">
+        </div>
+        <div class="introduktion-item text">
+            <h2>Om mig</h2>
+            <p>
+                Rymdens egen mekaniker. Med en bakgrund som flygplansreparatör och robottekniker tog jag steget ut i det okända och 
+                blev en nyckelperson hos Galaxium Voyages. Där arbetar jag med att hålla livsstödssystemen 
+                igång, reparera skadade farkoster och improvisera lösningar när tekniken sviker.
+            </p>
+            <p>
+                Mina arbetsdagar består av svävande verktyg, jazz i hörlurarna och kreativa nödlösningar som ofta involverar 
+                tejp, gamla reservdelar och en osannolik mängd tålamod. Jag är känd för min lugna närvaro och min torra 
+                humor — egenskaper som får hela besättningen att andas lite lättare, även när syrenivån sjunker.
+            </p>
+            <p>
+                När jag inte svetsar ihop trasiga moduler eller programmerar underhållsdrönare, samlar jag på verktyg från olika galaxer och 
+                skriver loggboksanteckningar som blandar teknik med poesi. För mig är rymden inte bara ett arbetsfält — det är ett hem 
+                byggt av stjärnstoft, skiftnycklar och små ögonblick av mänsklig värme.
+            </p>
+        </div>   
+    </div>
+
+    <div class="bildspel rubrik" id="bildspelRubrik">
+        <h3>Bildspel</h3>
+    </div>
+
+    <div class="slideshow-container">
+        
+        <img class="slide" src="MånsImages/bildspel1.png" alt="bild1">
+        <img class="slide" src="MånsImages/bildspel2.png" alt="bild2">
+        <img class="slide" src="MånsImages/bildspel3.png" alt="bild3">
+        <img class="slide" src="MånsImages/bildspel6.png" alt="bild4">
+        <img class="slide" src="MånsImages/bildspel5.png" alt="bild5">
+        <br>
+        <img class="prev" src="MånsImages/menuicon.png" alt="Menyikon" onclick="prevSlide()">
+        <img class="next" src="MånsImages/menuicon.png" alt="Menyikon" onclick="nextSlide()">
+    </div>
+
+    <div class="projekt rubrik" id="minaProjekt">
+        <h3>Projekt</h3>
+    </div>
+    <div class="projekt-container">
+        
+        <div id="projekt-lista"></div>
+    </div>
+    <script src="måns.js" defer></script>
 </body>
 </html>
