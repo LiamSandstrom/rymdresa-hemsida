@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesDavid.css">
+    <script defer src="slide.js"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>David Söderqvist</title>
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="menuIcon">
+            <img src="menuicon.png" alt="Menyikon">
+        </label>
+        <ul id="menu">
+            <li><a href="#main-title">About Me</a></li>
+            <li><a href="#picture-title">Bildspel</a></li>
+            <li><a href="#project-title">Projekt</a></li>
+        </ul>
+    </header>
+
+    <h1 class="responsiv-rubrik">Välkommen till min sida</h1>
+
+    <h1 id="main-title">David Söderqvist</h1>
+    <h2 class="chef">Ruttchef</h2>
+    <div class="wrapper">
+        <div class="profile">
+            <img src="MonkeyPicture.jpg" alt="">
+        </div>
+        <div class="intro">
+            <h1 id="about-me">
+                About Me
+            </h1>
+            <p>
+                Som ruttchef ansvarar jag för att utveckla och optimera företagets transportlösningar genom att forska
+                fram nya och
+                effektiva rutter som möter både affärsmål och kundbehov. Min roll innebär en kombination av strategiskt
+                tänkande,
+                operativt ansvar och analytisk förmåga. Genom noggrann analys av geografiska områden, kunddata,
+                trafikmönster och
+                logistiska resurser identifierar jag nya potentiella rutter som kan erbjuda bättre täckning, kortare
+                leveranstider och
+                minskade kostnader.
+            </p>
+        </div>
+    </div>
+    <h1 id="picture-title">Bildspel</h1>
+    <p class="picture-text">Galaxer jag upptäckt som blivit en del av våra rutter</p>
+
+
+
+    <div class="slideshow-container">
+        <img class="slide" src="Pictures/ja1.webp" alt="Bild 1">
+        <img class="slide" src="Pictures/ja2.webp" alt="Bild 2">
+        <img class="slide" src="Pictures/ja3.webp" alt="Bild 3">
+
+        <a class="prev" onclick="changeSlide(-1)">❮</a>
+        <a class="next" onclick="changeSlide(1)">❯</a>
+    </div>
+
+    <h1 id="project-title">Projekt</h1>
+    <p>Här nedan visas projekt som jag ansvarat över under min tid på Galaxium Voyages:</p>
+
+    <div id="app">
+        <div v-for="items in project" class="project">
+            <div class="column-left">
+                <h4>{{ items.Titel }}</h4>
+                <h3>{{ items.Kund }}</h3>
+                <p>{{ items.Beskrivning }}</p>
+                <p>{{ items.Info }}</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

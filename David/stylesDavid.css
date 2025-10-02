@@ -1,0 +1,229 @@
+
+.responsiv-rubrik {
+  font-size: 25px; /* standardstorlek för små skärmar */
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media (min-width: 568px) {
+    .responsiv-rubrik {
+        font-size: 35px;
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 1000px) {
+  .responsiv-rubrik {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+#menu-toggle {
+  display: none;
+}
+
+#menuIcon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#menu {
+  display: none;
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+#menu-toggle:checked ~ #menu {
+  display: flex;
+  flex-direction: column; 
+  text-align: right;
+}
+
+#menu li a {
+  display: block; 
+  padding: 1rem;
+  text-decoration: none;
+  color: #c5c6c7;
+}
+
+header {
+  padding: 0.5em;
+  text-align: right;
+  width: 100%;
+  background-color: var(--color-bg);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (min-width: 568px){
+  
+#menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#menu-toggle:checked ~ #menu {
+  display: block;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menuIcon {
+  display: none;
+}
+
+a {
+  color: #c5c6c7;
+}
+
+#menu li a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+#menu li a:hover {
+  transform: scale(1.2);
+}
+}
+
+body {
+    background-color: black;
+}
+
+.profile img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 20%;
+}
+
+.wrapper {
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+    margin-top: 100px;
+}
+
+.intro {
+    flex: 1;
+}
+
+h1, h2, h3, p {
+    color: white;
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 1,5rem;
+}
+
+h4 {
+    color: rgb(201, 79, 79);
+    font-family: sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+h3 {
+    color: white;
+}
+
+.intro h1 {
+    color: white;
+}
+
+#main-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    background-color: grey;
+}
+
+#picture-title {
+    text-align: center;
+    margin-top: 100px;
+    background-color: grey;
+}
+
+.slideshow-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    margin: 0;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.picture-text {
+    text-align: center;
+}
+
+.chef {
+    text-align: center;
+    margin-top: 0px;
+}
+
+#project-title {
+    text-align: center;
+    margin-top: 100px;
+    background-color: grey;
+}
+
