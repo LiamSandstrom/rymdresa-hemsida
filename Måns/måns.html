@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="måns.css" />
+    <link rel="stylesheet" href="måns.css" >
     <title>Document</title>
 </head>
 <body>
     <header>
-        <input type="checkbox" id="menu-toggle" />
+        <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" id="menuIcon">
-            <img src="MånsImages/menuicon.png alt="Menyikon" />
+            <img src="MånsImages/menuicon.png" alt="menyikon">
         </label>
         <ul id="menu">
-            <li><a href="">Hem</a></li>
+            <li><a href="../index.html">Hem</a></li>
             <li><a href="#bildspelRubrik">Bildspel</a></li>
             <li><a href="#minaProjekt">Mina projekt</a></li>
         </ul>
@@ -58,14 +58,16 @@
         <img class="slide" src="MånsImages/bildspel6.png" alt="bild4">
         <img class="slide" src="MånsImages/bildspel5.png" alt="bild5">
         <br>
-        <img class="prev" src="MånsImages/menuicon.png" onclick="prevSlide()">
-        <img class="next" src="MånsImages/menuicon.png" onclick="nextSlide()">
+        <img class="prev" src="MånsImages/menuicon.png" alt="Menyikon" onclick="prevSlide()">
+        <img class="next" src="MånsImages/menuicon.png" alt="Menyikon" onclick="nextSlide()">
     </div>
 
+    <div class="projekt rubrik" id="minaProjekt">
+        <h3>Projekt</h3>
+    </div>
     <div class="projekt-container">
-        <div class="projekt-item rubrik" id="minaProjekt">
-            <h3>Projekt</h3>
-        </div>
+        
+        <div id="projekt-lista"></div>
     </div>
     <script src="måns.js" defer></script>
 </body>

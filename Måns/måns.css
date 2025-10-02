@@ -29,6 +29,11 @@ h1 {
     font-size: 3rem; 
 }
 
+h3 {
+  color: var(--color-heading);
+  font-size: 2rem;
+}
+
 header {
   padding: 0.5em;
   text-align: right;
@@ -159,6 +164,35 @@ a {
     right: 20px;
 }
 
+.projekt-container {
+  padding: 2rem;
+  background-color: #0b0c1e;
+  color: #ffffff;
+}
+
+.projekt-item {
+  background-color: #1f2235;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projekt-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.projekt-item h4 {
+  margin-top: 0;
+  color: var(--color-heading);
+  font-size: 1.2rem;
+}
+
+.projekt-item p strong {
+  color: #ff6f61;
+}
 
 @media screen and (max-width: 768px){
   
