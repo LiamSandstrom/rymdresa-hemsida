@@ -1,0 +1,32 @@
+[
+    {
+        "titel": "NovaLink",
+        "kund": "Stellarion Command Systems",
+        "beskrivning": "Utveckling av ett användargränssnitt för övervakning av satellitdata i realtid.",
+        "information": "Systemet integrerades med lågfördröjningsprotokoll, visuell telemetri och en AI-baserad assistent för operatörer. Lösningen används nu i tre kontrollcenter världen över."
+    },
+    {
+       "titel": "CoreForge Titan",
+       "kund": "Orionis Engineering Collective",
+       "beskrivning": "Ansvarig för ett system som spårar komponenter i realtid under montering av industriella tryckkärl.",
+       "information": "Systemet använder RFID och bildanalys för att säkerställa korrekt installation. Felmarginalen minskade med 38 % under första kvartalet."
+    },
+    {
+        "titel": "SolSys Navigator",
+       "kund": "Galactica Museum Nexus",
+       "beskrivning": "Interaktiv upplevelse där besökare navigerar genom ett virtuellt solsystem.",
+       "information": "Jag ansvarade för design och programmering av 3D-miljön, inklusive en röststyrd guide och dynamiska ljuseffekter som simulerar stjärnljus."
+    },
+    {
+        "titel": "AstroDrill EVA",
+       "kund": "CosmoEd Training Syndicate",
+       "beskrivning": "En VR-simulator för träning av rymdpromenader för blivande astronauter.",
+       "information": "Projektet krävde realistisk fysiksimulering, verktygsinteraktioner och samarbete med tidigare astronauter för att återskapa autentiska scenarier."
+    },
+    {
+        "titel": "Companion-X",
+       "kund": "Nebulon Robotics Initiative",
+       "beskrivning": "Utveckling av en personlig robotassistent med adaptiv personlighet och uppdragslogik.",
+       "information": "Jag ledde teamet som designade interaktionen mellan människa och maskin, inklusive känsloljus, röstkommandon och uppdragsplanering. Prototypen används nu i utbildningssyfte."
+    }
+]

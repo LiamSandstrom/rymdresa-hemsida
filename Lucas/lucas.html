@@ -3,9 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styleLucas.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>chaufför</title>
 </head>
 <body>
-    <h1>hej</h1>
+    <header>
+      <input type="checkbox" id="menu-toggle" >
+      <label for="menu-toggle" id="menuIcon">
+      <img src="../images/menuicon.png" alt="Menyikon" >
+      </label>
+      <ul id="menu">
+        <li><a href="#presentationen">Presentation</a></li>
+        <li><a href="#minaProjekt">Project</a></li>
+        <li><a href="#minSlideshow">Slideshow</a></li>
+        <li><a href="#minSkillbar">Skillbar</a></li>
+      </ul>
+    </header>
+
+        <div class="presentation-container">
+            <div class="presentation-item rubrik" id="presentationen">
+                <h1>Chauffören Lucas </h1>
+            </div>
+            <div class="presentation-item bild">
+              <img src="teslaRymden.jpeg" alt="profilbild gul">
+            </div>
+            <div class="presentation-item text">
+                <h2>Presentation om mig</h2>
+                <p>
+                    God dag! Jag heter Lucas, och jag är er galaktiska chaufför.
+
+                   Min roll är enkel: jag är länken som binder samman stjärnsystemen. Jag kör de stora rymdskeppen genom galaxerna, strikt efter våra förutbestämda rutter.
+
+                   Ni ser mig i min dräkt, även vid skrivbordet, eftersom beredskap är allt. Dräkten är mitt liv, mitt kommunikationscenter, och mitt skydd mot rymdens faror. Jag hanterar last, passagerare och överljushastighets-hopp, allt medan jag konstant övervakar systemen för att undvika asteroider, solstormar eller värre.
+
+                  Jag är galaxens långtradarchaufför - betrodd, pålitlig och alltid redo att navigera genom det stora svarta. Jag håller galaxen rullande.
+                </p>
+            </div>
+        </div>
+
+        <div class="project-container">
+            <div class="project-item rubrik" id="minaProjekt">
+                <h3>Mina Projekt</h3>
+            </div>
+              <ul id="projektLista"></ul>
+        </div> 
+        
+        <div class = "slideshow rubrik" id="minSlideshow">
+            <h5>Slideshow</h5>
+        </div>
+        <div class="slideshow-container">
+            <img class="slide" src="bild1.jpg" alt="bild1">
+            <img class="slide" src="bild2.jpg" alt="bild2">
+            <img class="slide" src="bild3.jpg" alt="bild3">
+            <img class="slide" src="bild4.jpg" alt="bild4">
+
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <div class="skillbars rubrik" id="minSkillbar"><h6>Skillbar</h6></div>
+
+        <div class = "skillbar">
+            <div class="skill-container">
+                <div class="namn-skills">körning</div>
+                <div class="baren-skills">
+                    <div class="procent-skills" data-pro="90%" style="max-width: 90%"></div>
+                </div>
+            </div>
+
+            <div class="skill-container">
+                <div class="namn-skills">kartläsning</div>
+                <div class="baren-skills">
+                    <div class="procent-skills" data-pro="80%" style="max-width: 80%"></div>
+                </div>
+            </div>
+
+            <div class="skill-container">
+                <div class="namn-skills">håller tidsschema</div>
+                <div class="baren-skills">
+                    <div class="procent-skills" data-pro="99%" style="max-width: 99%"></div>
+                </div>
+            </div>
+
+            <div class="skill-container">
+                <div class="namn-skills">planering</div>
+                <div class="baren-skills">
+                    <div class="procent-skills" data-pro="40%" style="max-width: 40%"></div>
+                </div>
+            </div>
+
+
+        </div>
+        
+    <script src="scriptLucas.js"></script>  
 </body>
 </html>

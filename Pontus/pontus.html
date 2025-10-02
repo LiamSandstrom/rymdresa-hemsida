@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontus</title>
+    <link rel="stylesheet" href="pontus.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="pontus.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-text">
+                <h1 id="name">Pontus "Blue Bird"</h1>
+                <p class="lead" id="tagline">Rymdäventyrare / Utforskare av nya världar</p>
+                <p class="muted-text">
+                    Jag färdas mellan planeter, tar mig an unika uppdrag i galaxen och söker alltid nästa stora äventyr
+                    bland stjärnorna.
+                </p>
+            </div>
+            <div class="profile-photo card">
+                <img id="profileImg" src="../images/BlueProfile.png" alt="Profile photo">
+            </div>
+        </header>
+
+        <section class="card">
+            <h3>Mina bilder</h3>
+            <div class="slider">
+                <button class="slider-btn prev-btn"></button>
+                <div class="slides" id="slides">
+                    <img src="slide1.jpg" alt="">
+                    <img src="slide2.jpg" alt="">
+                    <img src="slide3.jpg" alt="">
+                    <img src="slide4.jpg" alt="">
+                </div>
+                <button class="slider-btn next-btn"></button>
+            </div>
+            <div class="slider-controls" id="dots"></div>
+        </section>
+
+        <section class="card">
+            <h3>Skills</h3>
+            <div class="skills" id="skills">
+                <div class="skill">
+                    <div class="meta"><span>Flygga rymdraket</span><span>50%</span></div>
+                    <div class="bar"><i data-skill="50"></i></div>
+                </div>
+                <div class="skill">
+                    <div class="meta"><span>Parkera rymdraketen</span><span>30%</span></div>
+                    <div class="bar"><i data-skill="30"></i></div>
+                </div>
+                <div class="skill">
+                    <div class="meta"><span>Hitta planeter</span><span>75%</span></div>
+                    <div class="bar"><i data-skill="75"></i></div>
+                </div>
+                <div class="skill">
+                    <div class="meta"><span>Äta</span><span>85%</span></div>
+                    <div class="bar"><i data-skill="85"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>Om mig</h3>
+            <p id="about">
+                Jag är en rymdäventyrare som utforskar galaxens mest avlägsna hörn. Mitt uppdrag är att resa mellan
+                olika planeter, upptäcka nya världar och lösa utmaningar som ingen människa tidigare stött på. Med mod,
+                nyfikenhet och en gnutta humor tar jag mig an uppdrag i kosmos — alltid redo för nästa äventyr bland
+                stjärnorna.
+            </p>
+        </section>
+
+        <section class="card">
+            <div class="project-header">
+                <div>
+                    <h3>Projekt</h3>
+                    <p class="muted-text">Mina äventyr</p>
+                </div>
+                <select id="projectSort" class="sort-select">
+                    <option value="original">Original ordning</option>
+                    <option value="asc">Sortera A-Ö</option>
+                    <option value="desc">Sortera Ö-A</option>
+                </select>
+            </div>
+            <div id="projects"></div>
+        </section>
+
+        <footer>Grupp 24</footer>
+    </div>
+
+</body>
+
+</html>

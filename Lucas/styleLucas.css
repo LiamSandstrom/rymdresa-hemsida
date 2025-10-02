@@ -1,0 +1,317 @@
+:root {
+  --color-bg: #0c0c0c; /* Primär bakgrund */
+  --color-surface: #1f252a; /* Sekundär (paneler/kort) */
+  --color-accent1: #66fcf1; /* Highlight/knappar */
+  --color-accent2: #45a29e; /* Call to action */
+  --color-text: #c5c6c7; /* Brödtext */
+  --color-heading: #ffffff; /* Rubriker */
+  --color-second-bg: rgb(35, 32, 32);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+  padding: 0.5em;
+  text-align: right;
+  width: 100%;
+  background-color: var(--color-bg);
+  z-index: 1000;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+#menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  gap: 2rem;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.8);
+}
+
+#menu-toggle:checked ~ #menu {
+  display: block;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menuIcon {
+  display: none;
+}
+
+#menu li a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+#menu li a:hover {
+  transform: scale(1.2);
+}
+
+h1 {
+  color: var(--color-heading);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: -1px;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.8);
+}
+
+h2 {
+  color: var(--color-heading);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;  
+}
+
+h3, h5, h6 {
+    color: var(--color-heading);
+    margin: 0;
+    font-size: 2.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: -1px;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.8);
+    padding-bottom: 1rem;
+}
+.presentation-container {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 1em;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+.presentation-item {
+    margin: 0.5em;
+    /* background-color: #45a29e; */
+}
+
+.rubrik {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.bild {
+    grid-row: 2 / span 2;
+    grid-column: 1;
+    
+}
+
+.text{
+    grid-row: 2 / span 2;
+    grid-column: 2;
+}
+
+.text p {
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.5;
+    font-family: 'roboto';
+    padding-right: 1rem;
+}
+
+.bild img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+}
+
+#projektLista{
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto;
+    display: grid;
+    gap: 1.5rem;
+    width: 95%;
+}
+
+.projektKort {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1.5rem;
+    border-radius: 12px;
+    transition:  0.3s ease-in-out;
+}
+
+.projektKort:hover {
+    transform: scale(1.02)
+}
+
+.projektKort h4 {
+    color: var(--color-heading);
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    letter-spacing: -1px;
+    text-shadow: 0 0 5px rgba(110, 0, 0, 0.8)
+}
+
+.projektKort p strong {
+    color: #6f9fc5;
+}
+
+.slideshow-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    margin: 0;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.skillbar {
+    display: block;
+    padding: 0 0 2rem 0;
+}
+
+.skill-container {
+    width: 100%;
+    max-width: 90vw;
+    padding: 0 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.namn-skills {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.baren-skills {
+    height: 1rem;
+    background: #1f252a;
+    border-radius: 3px;
+}
+
+.procent-skills {
+    height: 1rem;
+    background: #6f9fc5;
+    border-radius: 3px;
+    position: relative;
+    animation: fyllUppBarsen 2.5s 1;
+}
+
+.procent-skills::before {
+    content: attr(data-pro);
+    position: absolute;
+    background: #f1f1f1;
+    color: #0c0c0c;
+    border-radius: 4px;
+    font-size: 1rem;
+    top: -2.2rem;
+    right: 0;
+    transform: translateX(50%);
+}
+
+@keyframes fyllUppBarsen {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+  #menu-toggle {
+  display: none;
+}
+
+#menuIcon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#menu {
+  display: none;
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+#menu-toggle:checked ~ #menu {
+  display: flex;
+  flex-direction: column; 
+  text-align: right;
+}
+
+#menu li a {
+  display: block; 
+  padding: 0.1em 1rem;
+  text-decoration: none;
+  color: #c5c6c7;
+}
+
+.rubrik {
+    grid-area: 1 / span 2;
+}
+
+.bild {
+    grid-area: 2 / span 2;
+}
+
+.text {
+    grid-area: 3 / span 2;
+}
+}
