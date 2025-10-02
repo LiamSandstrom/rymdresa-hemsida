@@ -134,7 +134,7 @@ h1, h2, h3, p {
 }
 
 p {
-    font-size: 1,5rem;
+    font-size: 1.5rem;
 }
 
 h4 {
@@ -146,6 +146,7 @@ h4 {
 
 h3 {
     color: white;
+    font-size: 1.7rem;
 }
 
 .intro h1 {
